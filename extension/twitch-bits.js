@@ -69,8 +69,9 @@ function updateBitsTotal() {
 			return;
 		}
 
-		const total = res.total;
-		if (typeof res.total !== 'number' || Number.isNaN(total)) {
+		//const total = res.total;
+		const total = 0;
+		if (/*typeof res.total !== 'number' ||*/ Number.isNaN(total)) {
 			log.error('Total was an unexpected value:', res);
 			return;
 		}

@@ -161,7 +161,8 @@ function update() {
 
 	const runnersPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
-			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/runners.json' :
+			//'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/runners.json' :
+			'https://private.gamesdonequick.com/tracker/search' :
 			'https://private.gamesdonequick.com/tracker/search',
 		qs: {
 			type: 'runner',
@@ -172,7 +173,8 @@ function update() {
 
 	const runsPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
-			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/schedule.json' :
+			//'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/schedule.json' :
+			'https://private.gamesdonequick.com/tracker/search' :
 			'https://private.gamesdonequick.com/tracker/search',
 		qs: {
 			type: 'run',
@@ -183,14 +185,16 @@ function update() {
 
 	const adsPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
-			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/ads.json' :
+			//'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/ads.json' :
+			'https://private.gamesdonequick.com/tracker/gdq/ads/20/' :
 			'https://private.gamesdonequick.com/tracker/gdq/ads/20/',
 		json: true
 	});
 
 	const interviewsPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
-			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/interviews.json' :
+			//'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/interviews.json' :
+			'https://private.gamesdonequick.com/tracker/gdq/interviews/20/' :
 			'https://private.gamesdonequick.com/tracker/gdq/interviews/20/',
 		json: true
 	});
